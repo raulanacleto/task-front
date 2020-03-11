@@ -1,0 +1,1 @@
+export const URL_APICACAO = `http://localhost:8089/aplicacao`;

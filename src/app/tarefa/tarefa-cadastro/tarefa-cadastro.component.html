@@ -1,0 +1,46 @@
+<div *ngIf="tarefa" class="col-12">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+      <div class="form-group">
+        <label for=""></label>
+        <input
+          type="text"
+          class="form-control"
+          id="descricao"
+          name="descricao"
+          placeholder="Descricao"
+          [(ngModel)]="tarefa.description"
+        />
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            name="finalizado"
+            value="checkedValue"
+            checked
+            id="finalizado"
+            [(ngModel)]="tarefa.finished"
+          />
+          Finalizado
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <a
+        (click)="cadastrarTarefa()"
+        class="btn btn-primary"
+        href="#"
+        role="button"
+        >Cadastrar Tarefa</a
+      >
+    </div>
+  </div>
+</div>

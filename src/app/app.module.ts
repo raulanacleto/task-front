@@ -3,12 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TarefaListaComponent } from './tarefa/tarefa-lista/tarefa-lista.component';
+import { TarefaConsultaComponent } from './tarefa/tarefa-consulta/tarefa-consulta.component';
+import { MenuGeralComponent } from './menu-geral/menu-geral.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { TarefaCadastroComponent } from './tarefa/tarefa-cadastro/tarefa-cadastro.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TarefaListaComponent,
+    TarefaConsultaComponent,
+    MenuGeralComponent,
+    TarefaCadastroComponent
   ],
   imports: [
+    FormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],

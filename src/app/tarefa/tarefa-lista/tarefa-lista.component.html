@@ -1,0 +1,30 @@
+<app-menu-geral></app-menu-geral>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Descrição</th>
+      <th>Data Criação</th>
+      <th>Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tarefa of tarefas">
+      <td>{{ tarefa.id }}</td>
+      <td>{{ tarefa.description }}</td>
+      <td>{{ tarefa.createdAt }}</td>
+      <td>
+        <button
+          type="button"
+          (click)="excluir(tarefa)"
+          class="btn btn-primary btn-sm"
+        >
+          excluir
+        </button>
+        &nbsp;
+       
+      </td>
+    </tr>
+  </tbody>
+</table>
