@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "0e3edf82-973f-47b5-a6cf-04582722d502",
+		"name": "tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aplicacao/tarefa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aplicacao",
+						"tarefa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"titulo\" : \"titulo do postman\",\n\t\"descricao\" : \"Tarefa cadastrada pelo postman\",\n\t\"dataCriacao\" : \"2020-03-12 02:00:09\",\n\t\"concluido\" : false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aplicacao/tarefa/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aplicacao",
+						"tarefa",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"titulo\" : \"titulo\",\n\t\"descricao\" : \"descricao alterada\",\n\t\"dataCriacao\" : \"2020-02-01 02:09:12\",\n\t\"concluido\" : false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aplicacao/tarefa/atualizar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aplicacao",
+						"tarefa",
+						"atualizar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"finished\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aplicacao/tarefa/deletar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aplicacao",
+						"tarefa",
+						"deletar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
