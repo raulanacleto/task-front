@@ -15,6 +15,8 @@ src\utils\tasks.postman_collection.json
 
 ## Prévia da aplicação
 
-![Alt text](src\assets\readme\cadastro.png "cadastro")
 
-![Alt text](src\assets\readme\listagem.png "listagem")
+<img src="src\assets\readme\cadastro.png" alt="cadastro">
+
+
+<img src="src\assets\readme\listagem.png" alt="listagem">
