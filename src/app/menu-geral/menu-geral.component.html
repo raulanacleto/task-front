@@ -1,6 +1,19 @@
-<div class="card border-primary">
-  <img class="card-img-top" src="holder.js/100px180/" alt="" />
-  <div class="card-body">
-    <h4 class="card-title">Tarefas</h4>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Tarefas</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item">
+        <a  class="nav-item nav-link" routerLink="/cadastrar-tarefa" routerLinkActive="active" >Cadastrar Tarefa</a>
+      </li>
+
+      <li class="nav-item">
+        <a  class="nav-item nav-link" routerLink="/lista-tarefas" routerLinkActive="active" >Lista de tarefas</a>
+      </li>
+      
+    </ul>
   </div>
-</div>
+</nav>

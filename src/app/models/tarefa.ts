@@ -1,6 +1,10 @@
 export class Tarefa {
     id: number;
-    description: string;
-    finished: boolean;
-    createdAt: any;
+    titulo: string;
+    descricao: string;
+    concluido: boolean;
+    dataCriacao: any;
+    dataAtualizacao: any;
+    dataExclusao: any;
+    dataConclusao: any;
 }

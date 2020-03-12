@@ -1,46 +1,66 @@
-<div *ngIf="tarefa" class="col-12">
-  <div class="row">
-    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-      <div class="form-group">
-        <label for=""></label>
-        <input
-          type="text"
-          class="form-control"
-          id="descricao"
-          name="descricao"
-          placeholder="Descricao"
-          [(ngModel)]="tarefa.description"
-        />
-      </div>
-    </div>
+<div class="card">
+  <h5 class="card-header">Cadastro de tarefa</h5>
+  <div class="card-body">
+    <div *ngIf="tarefa" class="col-12">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+          <div class="form-group">
+            <label for="">Titulo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="titulo"
+              name="titulo"
+              placeholder="digite aqui o título da tarefa"
+              [(ngModel)]="tarefa.titulo"
+            />
+          </div>
+        </div>
 
-    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input
-            type="checkbox"
-            class="form-check-input"
-            name="finalizado"
-            value="checkedValue"
-            checked
-            id="finalizado"
-            [(ngModel)]="tarefa.finished"
-          />
-          Finalizado
-        </label>
-      </div>
-    </div>
-  </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+          <div class="form-group">
+            <label for="">Descrição</label>
+            <input
+              type="text"
+              class="form-control"
+              id="descricao"
+              name="descricao"
+              placeholder="digite aqui a descrição da tarefa"
+              [(ngModel)]="tarefa.descricao"
+            />
+          </div>
+        </div>
 
-  <div class="row">
-    <div class="col-12">
-      <a
-        (click)="cadastrarTarefa()"
-        class="btn btn-primary"
-        href="#"
-        role="button"
-        >Cadastrar Tarefa</a
-      >
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+          <label>Status</label>
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
+              name="concluido"
+              [(ngModel)]="tarefa.concluido"
+            />
+            <label class="custom-control-label" for="customCheck1"
+              >Concluído</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-12">
+          <a
+            (click)="salvarTarefa()"
+            class="btn btn-primary"
+            href="#"
+            role="button"
+            >Salvar</a
+          >
+        </div>
+      </div>
     </div>
   </div>
 </div>

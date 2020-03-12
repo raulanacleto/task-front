@@ -13,18 +13,31 @@ export class TarefaService {
 
   constructor(private http: HttpClient) {}
 
-  /** GET heroes from the server */
+  getTarefa(idTarefa: number): Observable<any> {
+    return this.http.get<any>(`${URL_APICACAO}/tarefa/${idTarefa}`);
+  }
+
   getTarefas(): Observable<any> {
-    return this.http.get<any>(`${URL_APICACAO}/task`);
+    return this.http.get<any>(`${URL_APICACAO}/tarefa`);
   }
 
   deletarTarefa(idTarefa: number): Observable<any> {
-    return this.http.delete<any>(`${URL_APICACAO}/task/deletar/${idTarefa}`);
+    return this.http.delete<any>(`${URL_APICACAO}/tarefa/deletar/${idTarefa}`);
   }
 
-  
-   /** POST: add a new hero to the server */
-   cadastrarTarefa (tarefa: Tarefa): Observable<any> {
-    return this.http.post<Tarefa>(`${URL_APICACAO}/task/cadastrar/`, tarefa, this.httpOptions);
+  cadastrarTarefa(tarefa: Tarefa): Observable<any> {
+    return this.http.post<Tarefa>(
+      `${URL_APICACAO}/tarefa/cadastrar/`,
+      tarefa,
+      this.httpOptions
+    );
+  }
+
+  atualizarTarefa(tarefa: Tarefa): Observable<any> {
+    return this.http.put<Tarefa>(
+      `${URL_APICACAO}/tarefa/atualizar/`,
+      tarefa,
+      this.httpOptions
+    );
   }
 }
