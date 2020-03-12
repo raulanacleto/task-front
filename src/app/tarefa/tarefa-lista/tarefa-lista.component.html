@@ -26,7 +26,7 @@
           </td>
           <td>{{ tarefa.titulo }}</td>
           <td>{{ tarefa.descricao }}</td>
-          <td>{{ tarefa.dataCriacao }}</td>
+          <td>{{ tarefa.dataCriacao | date: "dd/MM/yyyy HH:mm:ss" }}</td>
           <td>
             <button
               [disabled]="tarefa.dataExclusao != null"
